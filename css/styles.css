@@ -101,8 +101,18 @@ body {
   position: absolute;
   top: 362px;
   left: 20px;
-  color: #686868;
   margin: 0;
+  color: #686868;
+  /* 縁取り */
+  text-shadow:
+  1px  1px 1px white,
+ -1px  1px 1px white,
+  1px -1px 1px white,
+ -1px -1px 1px white,
+  1px  0px 1px white,
+  0px  1px 1px white,
+ -1px  0px 1px white,
+  0px -1px 1px white;
   animation: fadein 4s ease-in-out;
 }
 @keyframes fadein {
