@@ -31,7 +31,7 @@ body {
 .local-link {
   position: fixed;
   top: 0;
-  background-color: #9e9e9eb6;
+  background-color: #b8b8b8b8;
   width: 100%;
   height: 32px;
   display: flex;
@@ -73,11 +73,14 @@ body {
   display: inline-block;
   vertical-align: middle;
   line-height: 2.2rem;
+}
+.local-link a,.request a {
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   transition: all .5s;
 }
-.local-link a:hover, .return a:hover,.profile {
+.local-link a:hover, .return a:hover, .request a:hover, #works li p:nth-of-type(2):hover {
+  border-bottom: 2px solid currentColor;
   animation: none;
 }
 
@@ -102,17 +105,19 @@ body {
   top: 362px;
   left: 20px;
   margin: 0;
+  /* color: white; */
   color: #686868;
   /* 縁取り */
   text-shadow:
-  1px  1px 1px white,
- -1px  1px 1px white,
-  1px -1px 1px white,
- -1px -1px 1px white,
-  1px  0px 1px white,
-  0px  1px 1px white,
- -1px  0px 1px white,
-  0px -1px 1px white;
+  1px  1px white,
+  -1px  1px white,
+  1px -1px white,
+  -1px -1px white,
+  1px  0px white,
+  0px  1px white,
+  -1px  0px white,
+  0px -1px white;
+  /* letter-spacing: .3rem; */
   animation: fadein 4s ease-in-out;
 }
 @keyframes fadein {
@@ -158,6 +163,18 @@ body {
   font-size: 2rem;
   color: inherit;
 }
+#works li p:nth-of-type(2) {
+  line-height: 1;
+  border-bottom: 2px solid transparent;
+  transition: all .5s;
+  animation: flicker 1.5s infinite alternate ease-in-out;
+}
+#works li p a {
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: inherit;
+}
 
 #works li p {
   text-align: left;
@@ -192,9 +209,11 @@ body {
   text-align: center;
 }
 
-#profile .container {
-  width: 600px;
+#profile .container, .request {
+  max-width: 600px;
   margin: 0 auto;
+}
+#profile .container {
   display: flex;
   justify-content: space-between;
 }
@@ -217,6 +236,29 @@ body {
 
 .selfpr {
   padding-left: 1em;
+}
+
+.request p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.request ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.request li {
+  height: 40px;
+  margin-right: 3em;
+}
+
+.request img {
+  height: 100%;
+  width: 160px;
+  object-fit: contain;
 }
 
 .icon-sns {
@@ -267,7 +309,7 @@ footer {
     transform: scale(1.2, 1.2);
   }
 
-  .local-link a, .return a {
+  .local-link a, .return a, .request a, #works li p:nth-of-type(2) {
     animation: flicker 1.5s infinite alternate ease-in-out;
   }
   @keyframes flicker {
@@ -282,7 +324,7 @@ footer {
   .sitetitle {
     background: 0% 70%/cover url(../img/ブルドッグ_PC_モノクロ.jpg);
   }
-
+  
   #profile {
     margin-bottom: 50px;
   }
@@ -392,7 +434,6 @@ footer {
     margin: 0.5em 0;
     font-size: 1.6rem;
   }
-
   .icon-sns {
     width: 100px;
     position: absolute;
@@ -405,6 +446,23 @@ footer {
   }
   .icon-sns a {
     font-size: 1.4em;
+  }
+
+  .request {
+    width: 94%;
+    margin: 1em 3% 0;
+
+  }
+  .request ul {
+    margin-top: 5px;
+    justify-content: space-evenly;
+  }
+  .request li {
+    height: 30px;
+    margin: 0;
+  }
+  .request img {
+    width: 120px;
   }
 
   .return a {
