@@ -3,6 +3,7 @@ html {
   font-size: 62.5%;
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 a {
@@ -13,7 +14,7 @@ a:link, a:visited {
 }
 
 h1 {
-  font: bold 5rem 'Comic Sans MS', cursive;
+  font: bold 5rem;
 }
 
 img {
@@ -47,6 +48,7 @@ body {
 .local-link h1 {
   margin: 0;
   font-size: 2.4rem;
+  width: 8em;
   line-height: 1.2em;
   margin-left: 1em;
 }
@@ -58,15 +60,16 @@ body {
 
 .local-link ul {
   list-style: none;
-  min-width: 400px;
-  margin: 0 auto 0 4rem;
+  min-width: 300px;
+  width: 400px;
+  margin: 0 auto 0 4%;
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .local-link a {
-  font: 600 2.4rem sans-serif;
+  font: 600 2.2rem sans-serif;
   color: inherit;
   padding: 0;
   margin-top: 2px;
@@ -103,7 +106,7 @@ body {
   font: bold 5rem 'Comic Sans MS', cursive;
   position: absolute;
   top: 362px;
-  left: 20px;
+  right: 20px;
   margin: 0;
   /* color: white; */
   color: #686868;
@@ -343,7 +346,7 @@ footer {
   }
   .local-link h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.3em;
     margin-left: 1em;
   }
