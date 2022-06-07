@@ -79,15 +79,29 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(0,0,0,0.6);
-  /* width: 400px; */
   width: 25em;
-  visibility: hidden;
-  opacity: 0;
-  transition: all .2s ease;
 }
-.local-link .works:hover .mega {
-  opacity: 1;
-  visibility: visible;
+.mega li {
+  display: flex;
+  align-items: center;
+  border: solid #aaaaaa;
+  border-width: 0 3px;
+  margin: 0 5px;
+  padding: 0 5px;
+  height: 0;
+  /* overflow: hidden; */
+}
+.mega li, .mega li a img {
+  transform: scaleY(0);
+  transition: all .4s;
+}
+.local-link li:hover .mega li {
+  border-width: 3px;
+  margin: 5px;
+  padding: 5px;
+  height: 12vh;
+  /* overflow: visible; */
+  transform: scaleY(1);
 }
 .mega li a, .mega li p {
   font-weight: normal;
@@ -95,27 +109,22 @@ body {
   margin: 0;
   color: white;
 }
-.mega li {
-  height: 12vh;
-  margin: 5px;
-  padding: 5px;
-  border: #aaaaaa solid 3px;
-  display: flex;
-  align-items: center;
-}
 .mega li a img {
-  height: 9vh;
   object-fit: contain;
+  height: 9vh;
+}
+.local-link li:hover .mega li a img {
+  transform: scaleY(1);
 }
 
 .local-link a {
-  font: 600 2.2rem sans-serif;
+  font: 600 2.4rem sans-serif;
   color: inherit;
   padding: 0;
   margin-top: 2px;
   display: inline-block;
   vertical-align: middle;
-  line-height: 2.2rem;
+  line-height: .7;
 }
 .local-link a,.request a {
   border-top: 2px solid transparent;
